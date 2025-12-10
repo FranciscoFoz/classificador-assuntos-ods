@@ -87,7 +87,7 @@ class GeradorAssuntoODS:
         
         
         response = self.client.models.generate_content(
-            model='models/gemini-2.5-flash',
+            model='models/gemini-2.5-flash-lite',
             contents=[
             {
                 "role": "user",
@@ -187,7 +187,7 @@ class GeradorAssuntoODS:
        
         '''
         response = self.client.models.generate_content(
-            model='models/gemini-2.5-flash',
+            model='models/gemini-2.5-flash-lite',
                     contents=[
             {
                 "role": "user",

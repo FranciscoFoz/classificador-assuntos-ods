@@ -79,6 +79,10 @@ class GeradorAssuntoODS:
         - Analise o documento e insira apenas 5 assuntos/termos indexadores, em PT-BR, mais relevantes de acordo com o conteúdo.
         - Responda apenas os assuntos.
         - Liste os assuntos.
+        - Não explique.
+        - Não descreva o documento.
+        - Não use frases.
+        - Apenas devolva a lista final.
         '''
         
         
@@ -174,6 +178,9 @@ class GeradorAssuntoODS:
         """
         
         - Responda apenas o número e nome da ODS.
+        - Não explique.
+        - Não descreva o conteúdo.
+        - Apenas liste as ODS.
         - Caso haja mais que uma, responda em formato de lista, como no exemplo:
             - ODS 10. Redução das desigualdades
             - ODS 8. Trabalho decente e crescimento econômico

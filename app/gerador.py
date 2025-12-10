@@ -83,7 +83,7 @@ class GeradorAssuntoODS:
         
         
         response = self.client.models.generate_content(
-            model='models/gemini-2.0-flash',
+            model='models/gemini-2.5-flash',
             contents=[prompt, arquivo],
             config=types.GenerateContentConfig(
                 safety_settings=self.get_safety_settings(),
@@ -167,7 +167,7 @@ class GeradorAssuntoODS:
        
         '''
         response = self.client.models.generate_content(
-             model='models/gemini-2.0-flash',
+             model='models/gemini-2.5-flash',
             contents=[prompt, arquivo],
             config=types.GenerateContentConfig(
                 safety_settings=self.get_safety_settings(),

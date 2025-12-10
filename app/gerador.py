@@ -84,7 +84,20 @@ class GeradorAssuntoODS:
         
         response = self.client.models.generate_content(
             model='models/gemini-2.5-flash',
-            contents=[prompt, arquivo],
+            contents=[
+            {
+                "role": "user",
+                "parts": [
+                    {"text": prompt},
+                    {
+                        "file_data": {
+                            "file_uri": arquivo.uri,
+                            "mime_type": "text/plain"
+                        }
+                    }
+                ]
+            }
+        ],
             config=types.GenerateContentConfig(
                 safety_settings=self.get_safety_settings(),
                 max_output_tokens=200,
@@ -167,8 +180,21 @@ class GeradorAssuntoODS:
        
         '''
         response = self.client.models.generate_content(
-             model='models/gemini-2.5-flash',
-            contents=[prompt, arquivo],
+            model='models/gemini-2.5-flash',
+                    contents=[
+            {
+                "role": "user",
+                "parts": [
+                    {"text": prompt},
+                    {
+                        "file_data": {
+                            "file_uri": arquivo.uri,
+                            "mime_type": "text/plain"
+                        }
+                    }
+                ]
+            }
+        ],
             config=types.GenerateContentConfig(
                 safety_settings=self.get_safety_settings(),
                 max_output_tokens=200,

@@ -87,7 +87,7 @@ class GeradorAssuntoODS:
         
         
         response = self.client.models.generate_content(
-            model='models/gemini-2.5-flash-lite',
+            model='models/gemini-3.5-flash-lite',
             contents=[
             {
                 "role": "user",
